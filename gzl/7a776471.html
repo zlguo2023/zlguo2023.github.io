@@ -28,28 +28,4 @@
     j.async = true;
     e.parentNode.insertBefore(j, e);
   })(document, 'script');
-});</script><script>NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
-  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
-    var GUEST = ['nick', 'mail', 'link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item => {
-      return GUEST.includes(item);
-    });
-    new Valine({
-      el         : '#valine-comments',
-      verify     : false,
-      notify     : false,
-      appId      : '1DMDX7IbOxG12v17fJUdSykF-MdYXbMMI',
-      appKey     : 's2wp0jjDuW7tnjhJijD4IuUa',
-      placeholder: "欢迎交流讨论...",
-      avatar     : 'mm',
-      meta       : guest,
-      pageSize   : '10' || 10,
-      visitor    : true,
-      lang       : 'zh-cn' || 'zh-cn',
-      path       : location.pathname,
-      recordIP   : false,
-      serverURLs : 'https://1dmdx7ib.api.lncldglobal.com'
-    });
-  }, window.Valine);
-});</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":300,"height":600},"mobile":{"show":false},"rect":"opacity:0.7","log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html><script type="text/javascript" src="/js/clicklove.js"></script>
+});</script><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//unjkp.com/valine/dist/Valine.min.js"></script>//删除Valine核心代码库外链调用<script src="/js/src/Valine.min.js"></script>//调用刚下载的本地文件以加速加载速度<script src="/js/src/Valine.min.js"></script><script type="text/javascript">var GUEST=["nick","mail","link"],guest=(guest="nick,mail,link").split(",").filter(function(e){return-1<GUEST.indexOf(e)});new Valine({el:"#comments",verify:!1,notify:!1,appId:"1DMDX7IbOxG12v17fJUdSykF-MdYXbMMI",appKey:"s2wp0jjDuW7tnjhJijD4IuUa",placeholder:"欢迎交流讨论...",avatar:"mm",guest_info:["nick"],pageSize:"10"});var infoEle=document.querySelector("#comments .info");infoEle&&infoEle.childNodes&&0<infoEle.childNodes.length&&infoEle.childNodes.forEach(function(e){e.parentNode.removeChild(e)})</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({pluginModelPath:"assets/",model:{jsonPath:"/live2dw/assets/shizuku.model.json"},display:{position:"right",width:300,height:600},mobile:{show:!1},rect:"opacity:0.7",log:!1,pluginJsPath:"lib/",pluginRootPath:"live2dw/",tagMode:!1})</script></body></html><script type="text/javascript" src="/js/clicklove.js"></script>
