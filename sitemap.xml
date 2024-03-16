@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://zl-guo.com/about/index.html</loc>
+    <loc>https://zl-guo.com/gzl/7a776471.html</loc>
     
     <lastmod>2024-03-16</lastmod>
     
@@ -11,9 +11,9 @@
   </url>
   
   <url>
-    <loc>https://zl-guo.com/gzl/7a776471.html</loc>
+    <loc>https://zl-guo.com/about/index.html</loc>
     
-    <lastmod>2024-03-03</lastmod>
+    <lastmod>2024-03-16</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -74,13 +74,6 @@
 
   
   <url>
-    <loc>https://zl-guo.com/tags/%E7%9E%8E%E5%86%99%E7%9A%84/</loc>
-    <lastmod>2024-03-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://zl-guo.com/tags/%E6%B5%8B%E8%AF%95/</loc>
     <lastmod>2024-03-16</lastmod>
     <changefreq>weekly</changefreq>
@@ -94,6 +87,20 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://zl-guo.com/tags/%E7%9E%8E%E5%86%99%E7%9A%84/</loc>
+    <lastmod>2024-03-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
+  
+  <url>
+    <loc>https://zl-guo.com/categories/%E9%9A%8F%E4%BE%BF%E6%8A%84%E7%9A%84/</loc>
+    <lastmod>2024-03-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
 </urlset>
