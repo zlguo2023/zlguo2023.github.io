@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>合理成桥索力优化算例</title>
+      <link href="/gzl/5b330aa7.html"/>
+      <url>/gzl/5b330aa7.html</url>
+      
+        <content type="html"><![CDATA[<p>采用前文介绍的方法，以主梁的弯曲和拉压应变能为目标函数建立优化模型，将最优化理论应用到部分斜拉桥索力计算过程中，以结构内力和线形为控制条件，可以得到比较合理的成桥索力。<span id="more"></span></p><h2 id="计算案例介绍"><a href="#计算案例介绍" class="headerlink" title="计算案例介绍"></a><strong>计算案例介绍</strong></h2><p>广西鹿寨县新胜大桥为（47+80+47）m双塔单索面部分斜拉桥，主梁宽29m，梁体为预应力混凝土箱梁结构，采用单箱四室截面，跨中梁高为2.5m，根部梁高为4.8m。桥塔为钢筋混凝土结构，外形为由双柱组成的倒V形结构，塔高16m，采用塔梁固结体系，斜拉索采用扇形布置，横向布置小间距双排斜拉索，拉索在梁上纵向水平间距6m，塔上竖直间距1.1~1.4m。</p><img src="https://zlguo2023.oss-cn-hangzhou.aliyuncs.com/img/图片1.png" style="zoom:150%" /><center>图1 总体布置图（单位：m）</center><h2 id="索力分析结果"><a href="#索力分析结果" class="headerlink" title="索力分析结果"></a><strong>索力分析结果</strong></h2><p>当限定主梁关键截面最大挠度为-0.05m，弯矩限值为±25000kN.m，主塔塔顶位移为0.02m，斜拉索索力范围1000~1500kN，通过优化计算得出假定一次成桥状态下成桥索力值，以及在优化计算后索力作用下的梁体弯矩情况。</p><center>表1 斜拉桥最终恒载索力</center><table><thead><tr><th align="center">索号</th><th align="center">初张力（KN)</th><th align="center">恒载索力(KN)</th><th align="center">索号</th><th align="center">初张力（KN）</th><th align="center">恒载索力(KN)</th></tr></thead><tbody><tr><td align="center">1</td><td align="center">1310.6</td><td align="center">1249.9</td><td align="center">5</td><td align="center">1121.0</td><td align="center">1227.1</td></tr><tr><td align="center">2</td><td align="center">1270.2</td><td align="center">1283.9</td><td align="center">6</td><td align="center">1112.0</td><td align="center">1203.2</td></tr><tr><td align="center">3</td><td align="center">1217.6</td><td align="center">1272.9</td><td align="center">7</td><td align="center">1125.1</td><td align="center">1182.7</td></tr><tr><td align="center">4</td><td align="center">1174.9</td><td align="center">1245.8</td><td align="center">8</td><td align="center">1157.6</td><td align="center">1177.5</td></tr></tbody></table><center>表2 全桥典型截面恒载弯矩（单位：kN.m）</center><table><thead><tr><th align="center">截面位置</th><th align="center">边跨跨中</th><th align="center">近塔根截面</th><th align="center">中跨跨中</th></tr></thead><tbody><tr><td align="center">弯矩值</td><td align="center">22476</td><td align="center">-15279</td><td align="center">9681</td></tr></tbody></table><img src="https://zlguo2023.oss-cn-hangzhou.aliyuncs.com/img/图片2.gif" style="zoom:150%" /><center>图2 1/2主梁成桥恒载弯矩图（单位：KN.m）</center><p>从优化计算结果可见，成桥恒载索力分布比较均匀，成桥恒载弯矩也比较平滑。中墩支点处负弯矩较大，是因为桥塔结构在桥纵向为A型所导致，但弯矩值均处于主梁弯矩可行域范围内，主梁受力比较合理。</p><h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a><strong>后记</strong></h2><p>本文采用的分析方法不仅适用于部分斜拉桥，对于其他类型斜拉桥也是适用的，后续我会应用其他的方法进行对比分析。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 斜拉桥 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 成桥索力 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>现浇箱梁横梁的计算方法讨论</title>
       <link href="/gzl/37b3a32d.html"/>
       <url>/gzl/37b3a32d.html</url>
@@ -73,69 +98,6 @@
             <tag> 振动控制 </tag>
             
             <tag> TMD </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>我的第三篇文章</title>
-      <link href="/gzl/38273d3e.html"/>
-      <url>/gzl/38273d3e.html</url>
-      
-        <content type="html"><![CDATA[<p>拟建仙葫大道滨江小区人行天桥跨越仙葫大道，桥位附近有现状公交车站，天桥南侧为沿江风光带，北侧为滨江小区。桥位处现状为无信号灯控制的人行横道过街方式，仙葫大道为城市主干路，来往机动车速度较快，且交通量大，行人过街存在极大的安全隐患。因此为方便附近居民出行和搭乘公交在此处设置人行天桥一座。</p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 测试 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>我的第二篇文章</title>
-      <link href="/gzl/38273d3e.html"/>
-      <url>/gzl/38273d3e.html</url>
-      
-        <content type="html"><![CDATA[<p>拟建仙葫大道滨江小区人行天桥跨越仙葫大道，桥位附近有现状公交车站，天桥南侧为沿江风光带，北侧为滨江小区。桥位处现状为无信号灯控制的人行横道过街方式，仙葫大道为城市主干路，来往机动车速度较快，且交通量大，行人过街存在极大的安全隐患。因此为方便附近居民出行和搭乘公交在此处设置人行天桥一座。</p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 要删除的 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>我的第一篇文章</title>
-      <link href="/gzl/7a776471.html"/>
-      <url>/gzl/7a776471.html</url>
-      
-        <content type="html"><![CDATA[<p>0.04 0.03&#x2F;0.05”：代表从起始端开始沿道路前进方向第一联首、尾端伸缩缝：0.04m 0.03m；第二联首、尾端伸缩缝：0.05m 0.03m；第三联首、尾端伸缩缝：0.05m 0.03m；第四联首、尾端伸缩缝：0.05m 0.03m；第五联首、尾端伸缩缝：0.05m 0.03m；</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 随便抄的 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 瞎写的 </tag>
             
         </tags>
       
