@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://zl-guo.com/fenghua/index.html</loc>
+    
+    <lastmod>2025-02-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://zl-guo.com/gzl/4a17b156.html</loc>
     
     <lastmod>2025-02-06</lastmod>
@@ -14,15 +23,6 @@
     <loc>https://zl-guo.com/gzl/4a9c088d.html</loc>
     
     <lastmod>2025-02-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://zl-guo.com/fenghua/index.html</loc>
-    
-    <lastmod>2025-01-24</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
