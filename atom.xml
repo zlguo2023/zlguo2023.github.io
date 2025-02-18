@@ -6,7 +6,7 @@
   <link href="https://zl-guo.com/atom.xml" rel="self"/>
   
   <link href="https://zl-guo.com/"/>
-  <updated>2025-02-18T02:56:33.504Z</updated>
+  <updated>2025-02-18T10:21:27.522Z</updated>
   <id>https://zl-guo.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>一个读取CAD多段线坐标的脚本</title>
+    <link href="https://zl-guo.com/gzl/e27d950f.html"/>
+    <id>https://zl-guo.com/gzl/e27d950f.html</id>
+    <published>2025-02-18T09:56:38.125Z</published>
+    <updated>2025-02-18T10:21:27.522Z</updated>
+    
+    <content type="html"><![CDATA[<p>在做图的时候，点基础坐标一般先画一根多段线，然后导出多段线坐标再做表格。为提高工作效率，我想到用python写一个脚本，能直接读取多段线坐标直接生成excel表格。<span id="more"></span></p><h2 id="Python程序代码"><a href="#Python程序代码" class="headerlink" title="Python程序代码"></a><strong>Python程序代码</strong></h2><p>cad用2013以上版本，输出的坐标是你画多段线的点的顺序，代码如下：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pyautocad <span class="keyword">import</span> Autocad, APoint</span><br><span class="line"><span class="keyword">from</span> openpyxl <span class="keyword">import</span> Workbook</span><br><span class="line"></span><br><span class="line"><span class="comment"># 初始化AutoCAD</span></span><br><span class="line">acad = Autocad(create_if_not_exists=<span class="literal">True</span>)</span><br><span class="line">acad.prompt(<span class="string">&quot;AutoCAD对象已初始化\n&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取当前选中的对象</span></span><br><span class="line">selection = acad.get_selection()</span><br><span class="line"><span class="keyword">if</span> <span class="keyword">not</span> selection:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;未选中任何对象&quot;</span>)</span><br><span class="line">    exit()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建一个新的Excel工作簿</span></span><br><span class="line">wb = Workbook()</span><br><span class="line">ws = wb.active</span><br><span class="line">ws.title = <span class="string">&quot;多段线坐标&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置表头</span></span><br><span class="line">ws.append([<span class="string">&quot;点编号&quot;</span>, <span class="string">&quot;X坐标&quot;</span>, <span class="string">&quot;Y坐标&quot;</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 遍历选中的对象</span></span><br><span class="line"><span class="keyword">for</span> obj <span class="keyword">in</span> selection:</span><br><span class="line">    <span class="keyword">if</span> obj.ObjectName == <span class="string">&quot;AcDbPolyline&quot;</span>:</span><br><span class="line">        <span class="comment"># 获取多段线的顶点</span></span><br><span class="line">        points = obj.Coordinates</span><br><span class="line">        point_count = <span class="built_in">len</span>(points) // <span class="number">2</span>  <span class="comment"># 每个点有X和Y两个坐标</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># 将坐标写入Excel</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(point_count):</span><br><span class="line">            x = points[i * <span class="number">2</span>]</span><br><span class="line">            y = points[i * <span class="number">2</span> + <span class="number">1</span>]</span><br><span class="line">            ws.append([i + <span class="number">1</span>, x, y])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 保存Excel文件</span></span><br><span class="line">excel_filename = <span class="string">&quot;polyline_coordinates.xlsx&quot;</span></span><br><span class="line">wb.save(excel_filename)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;坐标已保存到 <span class="subst">&#123;excel_filename&#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure><p><img src="https://zlguo2023.oss-cn-hangzhou.aliyuncs.com/img/ddxzb.png"></p><center>脚本运行效果</center>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;在做图的时候，点基础坐标一般先画一根多段线，然后导出多段线坐标再做表格。为提高工作效率，我想到用python写一个脚本，能直接读取多段线坐标直接生成excel表格。</summary>
+    
+    
+    
+    <category term="Python" scheme="https://zl-guo.com/categories/Python/"/>
+    
+    
+    <category term="日常生活" scheme="https://zl-guo.com/tags/%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB/"/>
+    
+  </entry>
   
   <entry>
     <title>共享一个PPT计时器</title>
