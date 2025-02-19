@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>在Midascivil模型里批量添加桩基土弹簧</title>
+      <link href="/gzl/9d9753ca.html"/>
+      <url>/gzl/9d9753ca.html</url>
+      
+        <content type="html"><![CDATA[<p>在用midascivil做计算的时候，有些模型需要建立桩基础来考虑桩土效应，手动添加土弹簧是一件很繁琐的事情。为提高工作效率，基于python写了一个脚本，能直接把excel表格计算的土弹簧批量地添加到midas模型里面。<span id="more"></span></p><h2 id="Python程序代码"><a href="#Python程序代码" class="headerlink" title="Python程序代码"></a><strong>Python程序代码</strong></h2><p>运行脚本后会生成一个mct脚本文件，在midascivil软件的mct命令窗口打开，然后运行就可以了，需要先计算好土弹簧放入相应的excel表格，代码部分土弹簧参数根据自己使用的midas版本进行调整。代码如下：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> subprocess</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">run_midas_script</span>(<span class="params">script_path</span>):</span><br><span class="line">    subprocess.run([<span class="string">&#x27;midas_civil_path&#x27;</span>, <span class="string">&#x27;-run&#x27;</span>, script_path], check=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">generate_midas_script</span>(<span class="params">df, output_script_path</span>):</span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(output_script_path, <span class="string">&#x27;w&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">        <span class="keyword">for</span> index, row <span class="keyword">in</span> df.iterrows():</span><br><span class="line">            node_id = row[<span class="string">&#x27;NodeID&#x27;</span>]</span><br><span class="line">            stiffness_x = row[<span class="string">&#x27;SpringStiffnessX&#x27;</span>]</span><br><span class="line">            stiffness_y = row[<span class="string">&#x27;SpringStiffnessY&#x27;</span>]</span><br><span class="line">            stiffness_z = row[<span class="string">&#x27;SpringStiffnessZ&#x27;</span>]</span><br><span class="line">            </span><br><span class="line">            command = <span class="string">f&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">            *SPRING</span></span><br><span class="line"><span class="string">            <span class="subst">&#123;node_id&#125;</span>, LINEAR,NO, NO, NO, NO, NO, NO, <span class="subst">&#123;stiffness_x&#125;</span>, <span class="subst">&#123;stiffness_y&#125;</span>, <span class="subst">&#123;stiffness_z&#125;</span>, 0, 0, 0, NO, 0, 0, 0, 0, 0, 0, 边界组, 0, 0, 0, 0, 0</span></span><br><span class="line"><span class="string">            &quot;&quot;&quot;</span></span><br><span class="line">            f.write(command)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>():</span><br><span class="line">    excel_file = <span class="string">&#x27;soil_spring_data.xlsx&#x27;</span></span><br><span class="line">    output_script_path = <span class="string">&#x27;add_soil_springs.mct&#x27;</span></span><br><span class="line">    </span><br><span class="line">    df = pd.read_excel(excel_file)</span><br><span class="line">    generate_midas_script(df, output_script_path)</span><br><span class="line">    run_midas_script(output_script_path)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure><p><img src="https://zlguo2023.oss-cn-hangzhou.aliyuncs.com/img/excel%E6%95%B0%E6%8D%AE.png"></p><center>excel表格土弹簧数据</center><p><img src="https://zlguo2023.oss-cn-hangzhou.aliyuncs.com/img/tutanhuang.png"></p><center>导入mct脚本运行后结果</center>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 结构设计编程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>一个读取CAD多段线坐标的脚本</title>
       <link href="/gzl/e27d950f.html"/>
       <url>/gzl/e27d950f.html</url>
