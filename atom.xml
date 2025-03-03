@@ -6,7 +6,7 @@
   <link href="https://zl-guo.com/atom.xml" rel="self"/>
   
   <link href="https://zl-guo.com/"/>
-  <updated>2025-03-02T11:31:48.824Z</updated>
+  <updated>2025-03-03T03:04:50.777Z</updated>
   <id>https://zl-guo.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://zl-guo.com/gzl/60201e1c.html"/>
     <id>https://zl-guo.com/gzl/60201e1c.html</id>
     <published>2025-03-02T11:16:29.829Z</published>
-    <updated>2025-03-02T11:31:48.824Z</updated>
+    <updated>2025-03-03T03:04:50.777Z</updated>
     
-    <content type="html"><![CDATA[<p>目前，桥梁拉索索力的优化方法有很多，将神经网络方法与遗传算法结合在一起，在解决非线性问题的最优解问题上有独到的优势。<span id="more"></span></p><h2 id="BP神经网络及遗传算法"><a href="#BP神经网络及遗传算法" class="headerlink" title="BP神经网络及遗传算法"></a>BP神经网络及遗传算法</h2><p>BP神经网络由于具有强大的非线性映射能力在结构分析被广泛采用，基于神经网络的索力优化问题主要包括如下步骤：参数的选取，网络结构的确定和学习样本规格化；初始权值的选取和控制条件的确定。根据这种思想，可以先在有限元模型的基础上，输入多组索力向量与对应控制目标值的样本，经过神经网络的训练就会获得索力向量与控制参数的非线性模糊关系，从而进行索力优化。</p><h2 id="优化步骤"><a href="#优化步骤" class="headerlink" title="优化步骤"></a>优化步骤</h2><p>以一组斜拉桥成桥的索力和对应的结构效应数据进行分析，整个过程简单的说就是利用正交试验法进行BP网络的训练样本的正交设计，将索力初拉值作为BP网络的输入，以斜拉桥某些重要截面的位移值和应力值作为输出，然后进行BP网络训练，最后进行遗传算法的索力寻优。</p><p><img src="https://zlguo2023.oss-cn-hangzhou.aliyuncs.com/img/QLshuju.png"></p><h2 id="构建目标优化函数"><a href="#构建目标优化函数" class="headerlink" title="构建目标优化函数"></a>构建目标优化函数</h2><p>以成桥恒载状态目标函数为例，如下所示：</p><p><img src="https://zlguo2023.oss-cn-hangzhou.aliyuncs.com/img/youhuahanshu.png"></p><h2 id="优化结果"><a href="#优化结果" class="headerlink" title="优化结果"></a>优化结果</h2><p>选取目标函数值较小的几组结果，优化结果如下:</p><p><img src="https://zlguo2023.oss-cn-hangzhou.aliyuncs.com/img/youhiajieguo.png"></p><p>对应优化目标函数值：</p><p><img src="https://zlguo2023.oss-cn-hangzhou.aliyuncs.com/img/hanshuzhi.png"></p>]]></content>
+    <content type="html"><![CDATA[<p>目前，桥梁拉索索力的优化方法有很多，将神经网络方法与遗传算法结合在一起，在解决非线性问题的最优解问题上有独到的优势。<span id="more"></span></p><h2 id="BP神经网络及遗传算法"><a href="#BP神经网络及遗传算法" class="headerlink" title="BP神经网络及遗传算法"></a>BP神经网络及遗传算法</h2><p>BP神经网络由于具有强大的非线性映射能力在结构分析被广泛采用，基于神经网络的索力优化问题主要包括如下步骤：参数的选取，网络结构的确定和学习样本规格化；初始权值的选取和控制条件的确定。根据这种思想，可以先在有限元模型的基础上，输入多组索力向量与对应控制目标值的样本，经过神经网络的训练就会获得索力向量与控制参数的非线性模糊关系，从而进行索力优化。</p><h2 id="优化步骤"><a href="#优化步骤" class="headerlink" title="优化步骤"></a>优化步骤</h2><p>以一组斜拉桥成桥的索力和对应的结构效应数据进行分析，整个过程简单的说就是利用正交试验法进行BP网络的训练样本的正交设计，将索力初拉力值作为BP网络的输入样本，以斜拉桥某些重要截面的位移值和应力值作为输出样本，然后进行BP网络训练，最后进行遗传算法的索力寻优。</p><p><img src="https://zlguo2023.oss-cn-hangzhou.aliyuncs.com/img/QLshuju.png"></p><h2 id="构建目标优化函数"><a href="#构建目标优化函数" class="headerlink" title="构建目标优化函数"></a>构建目标优化函数</h2><p>以索力初拉力为变量，构建成桥恒载状态目标函数，如下所示：</p><p><img src="https://zlguo2023.oss-cn-hangzhou.aliyuncs.com/img/youhuahanshu.png"></p><h2 id="优化结果"><a href="#优化结果" class="headerlink" title="优化结果"></a>优化结果</h2><p>根据优化结果，选取目标函数值较小的几组结果，如下所示:</p><p><img src="https://zlguo2023.oss-cn-hangzhou.aliyuncs.com/img/youhiajieguo.png"></p><p>对应优化目标函数值：</p><p><img src="https://zlguo2023.oss-cn-hangzhou.aliyuncs.com/img/hanshuzhi.png"></p><h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>实际上也可以以桥梁弯曲应变能为目标优化函数，把我们关注的问题定义为约束条件进行优化，优化步骤跟本文是一样的。</p>]]></content>
     
     
     <summary type="html">&lt;p&gt;目前，桥梁拉索索力的优化方法有很多，将神经网络方法与遗传算法结合在一起，在解决非线性问题的最优解问题上有独到的优势。</summary>
