@@ -6,7 +6,7 @@
   <link href="https://zl-guo.com/atom.xml" rel="self"/>
   
   <link href="https://zl-guo.com/"/>
-  <updated>2025-03-03T03:04:50.777Z</updated>
+  <updated>2025-05-11T03:32:04.960Z</updated>
   <id>https://zl-guo.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>人行桥、连廊人致振动舒适性评估步骤</title>
+    <link href="https://zl-guo.com/gzl/99f42142.html"/>
+    <id>https://zl-guo.com/gzl/99f42142.html</id>
+    <published>2025-05-09T09:19:28.423Z</published>
+    <updated>2025-05-11T03:32:04.960Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近参考同行的一些经验，结合相关的文献资料，对人行桥、连廊等结构的人致振动舒适性评估的流程进行了总结。<span id="more"></span></p><p>人行桥、连廊等结构的人致振动舒适性评估的流程如下图：</p><p><img src="https://zlguo2023.oss-cn-hangzhou.aliyuncs.com/img/%E5%9F%BA%E6%9C%AC%E6%B5%81%E7%A8%8B%E5%9B%BE1.jpg" alt="基本流程图1"></p><center>人行桥舒适性评估流程</center>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;最近参考同行的一些经验，结合相关的文献资料，对人行桥、连廊等结构的人致振动舒适性评估的流程进行了总结。</summary>
+    
+    
+    
+    <category term="人行桥" scheme="https://zl-guo.com/categories/%E4%BA%BA%E8%A1%8C%E6%A1%A5/"/>
+    
+    
+    <category term="振动控制" scheme="https://zl-guo.com/tags/%E6%8C%AF%E5%8A%A8%E6%8E%A7%E5%88%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>采用BP神经网络及遗传算法进行索力优化</title>
