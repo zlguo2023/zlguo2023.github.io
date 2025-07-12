@@ -6,7 +6,7 @@
   <link href="https://zl-guo.com/atom.xml" rel="self"/>
   
   <link href="https://zl-guo.com/"/>
-  <updated>2025-07-06T06:44:38.152Z</updated>
+  <updated>2025-07-12T09:29:50.459Z</updated>
   <id>https://zl-guo.com/</id>
   
   <author>
@@ -17,16 +17,16 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>铝合金桁架天桥风致抖振分析</title>
-    <link href="https://zl-guo.com/gzl/8091ce45.html"/>
-    <id>https://zl-guo.com/gzl/8091ce45.html</id>
-    <published>2025-07-06T05:48:52.543Z</published>
-    <updated>2025-07-06T06:44:38.152Z</updated>
+    <title>铝合金桁架天桥风振系数研究</title>
+    <link href="https://zl-guo.com/gzl/f4f69631.html"/>
+    <id>https://zl-guo.com/gzl/f4f69631.html</id>
+    <published>2025-07-11T09:04:01.817Z</published>
+    <updated>2025-07-12T09:29:50.459Z</updated>
     
-    <content type="html"><![CDATA[<p>常规的人行天桥风荷载一般不起控制作用，但是对大跨径铝合金人行天桥风荷载的影响不容忽视，对一座大跨径的铝合金桁架人行天桥进行了风致抖振分析，研究风荷载对大跨径轻型结构天桥的影响。<span id="more"></span></p><h2 id="风荷载模拟"><a href="#风荷载模拟" class="headerlink" title="风荷载模拟"></a>风荷载模拟</h2><p>在计算桁架结构天桥风荷载作用时，参考的是《建筑结构荷载规范》的方法。分析结构风振响应的方法采用的是时域分析法，利用编程程序对各点风速时程曲线进行数值模拟并转化为相应节点荷载时程曲线，再将节点荷载时程输入到有限元模型相应节点上进行风荷载作用下的时程分析。</p><img src="https://zlguo2023.oss-cn-hangzhou.aliyuncs.com/img/图片1.png" alt="mx1" style="zoom:130%;" /><center> 计算模型 </center><h2 id="风场模拟及计算结果"><a href="#风场模拟及计算结果" class="headerlink" title="风场模拟及计算结果"></a>风场模拟及计算结果</h2><p>水平向脉动风采用Danvenport谱对风速时程曲线进行数值模拟，竖向脉动风采用panofsky谱对风速时程曲线进行数值模拟。总风速时程为平均风与脉动风的和。</p><p><img src="https://zlguo2023.oss-cn-hangzhou.aliyuncs.com/img/sc2.png" alt="图片2"></p><p><img src="https://zlguo2023.oss-cn-hangzhou.aliyuncs.com/img/sc3.png" alt="图片3"></p><center> 跨中节点水平向总风速时程 </center><p>采用midascivil进行时程分析。</p><img src="https://zlguo2023.oss-cn-hangzhou.aliyuncs.com/img/wy1.jpg" alt="1" style="zoom:40%;" /><center> 跨中节点水平向位移时程 </center><h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>单主梁桥情况与本文桁架结构有点区别，需要求出主梁的三分力系数，再转化为抖振力施加在结构上。</p>]]></content>
+    <content type="html"><![CDATA[<p>常规的人行天桥风荷载一般不起控制作用，本文对一座大跨径的铝合金桁架人行天桥进行了风致抖振分析，以研究风荷载对大跨径轻型结构天桥的影响。<span id="more"></span></p><h2 id="风荷载模拟"><a href="#风荷载模拟" class="headerlink" title="风荷载模拟"></a>风荷载模拟</h2><p>分析对象为一计算跨径39.9m铝合金桁架结构，参考《建筑结构荷载规范》的方法计算桁架结构天桥风荷载作用。分析结构风振响应的方法采用的是时域分析法，利用编程程序对各点风速时程曲线进行数值模拟并转化为相应节点荷载时程曲线，再将节点荷载时程输入到有限元模型相应节点上进行风荷载作用下的时程分析。</p><img src="https://zlguo2023.oss-cn-hangzhou.aliyuncs.com/img/图片1.png" alt="mx1" style="zoom:130%;" /><center> 计算模型 </center><h2 id="风场模拟及计算结果"><a href="#风场模拟及计算结果" class="headerlink" title="风场模拟及计算结果"></a>风场模拟及计算结果</h2><p>采用谐波合成法生成风速时程，水平向脉动风采用Danvenport谱对风速时程曲线进行数值模拟，竖向脉动风采用panofsky谱对风速时程曲线进行数值模拟。总风速时程为平均风与脉动风的和。</p><img src="https://zlguo2023.oss-cn-hangzhou.aliyuncs.com/img/fs.png" style="zoom:60%;" /><center> 跨中节点水平向总风速时程 </center><p>采用midascivil进行非线性时程分析，考虑恒载+1&#x2F;2活载的荷载工况。</p><img src="https://zlguo2023.oss-cn-hangzhou.aliyuncs.com/img/wy1.jpg" alt="1" style="zoom:40%;" /><center> 跨中节点水平向位移时程 </center><p>根据时程分析结果，计算得到桁架水平向的一致位移风振系数为1.07，说明铝合金桁架结构在风压脉动作用下的结构响应很小，风振效应较弱，桁架结构横向刚度比较合理。</p><h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>单主梁桥情况（如钢箱梁等）与本文桁架结构有点区别，需要求出主梁的三分力系数，再转化为抖振力施加在结构上。以后遇到类似的问题，作者也会做一些研究，并分享给大家。</p>]]></content>
     
     
-    <summary type="html">&lt;p&gt;常规的人行天桥风荷载一般不起控制作用，但是对大跨径铝合金人行天桥风荷载的影响不容忽视，对一座大跨径的铝合金桁架人行天桥进行了风致抖振分析，研究风荷载对大跨径轻型结构天桥的影响。</summary>
+    <summary type="html">&lt;p&gt;常规的人行天桥风荷载一般不起控制作用，本文对一座大跨径的铝合金桁架人行天桥进行了风致抖振分析，以研究风荷载对大跨径轻型结构天桥的影响。</summary>
     
     
     
