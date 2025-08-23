@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>自己做一个傅里叶分析工具</title>
+      <link href="/gzl/cfba914c.html"/>
+      <url>/gzl/cfba914c.html</url>
+      
+        <content type="html"><![CDATA[<p>傅里叶分析是一个很有用的数学方法，在应用一些软件计算得到相关结果后竟然发现没有傅里叶分析工具，于是我给自己做了一个。<span id="more"></span></p><p>导入需要进行分析的数据，可以得到频率幅值、相位谱和功率谱，并能进行滤波分析以及任意频率成分组合的功能。</p><img src="https://zlguo2023.oss-cn-hangzhou.aliyuncs.com/img/fft-1.png" alt="fft-1" style="zoom:60%;" /><img src="https://zlguo2023.oss-cn-hangzhou.aliyuncs.com/img/fft-2.png" alt="fft-2" style="zoom:60%;" /><center>软件界面</center><p>实际上，我们还可以用傅里叶分析工具去分析股票，在生活当中还是非常有用的。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数学分析工具 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>某大跨人行拱桥在船撞作用下的动力特性及稳定性分析</title>
       <link href="/gzl/f98b0068.html"/>
       <url>/gzl/f98b0068.html</url>
