@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>单索面曲梁人行悬索桥主缆找形分析</title>
+      <link href="/gzl/37cbfda0.html"/>
+      <url>/gzl/37cbfda0.html</url>
+      
+        <content type="html"><![CDATA[<p>单索面曲梁人行悬索桥是很有张力的一个设计，有一种独特的结构美，其难点在于主缆找形。单索面曲梁人行悬索桥主缆一般无法满足节线法的假定，可以采用自编程序或者非线性有限元迭代法等方法找形。<span id="more"></span></p><img src="https://zlguo2023.oss-cn-hangzhou.aliyuncs.com/img/36a7839c6126ae161f1ba1ed526ac113.jpeg" alt="36a7839c6126ae161f1ba1ed526ac113" style="zoom: 50%;" /><center> 单索面曲梁人行悬索桥资料图 </center><p>这类空间主缆受吊杆布置及吊杆力的影响，很难去指定一个索形态，因此设计时一般需先预设一个目标，以此来作为找形目标，并根据成桥计算结果去调整目标索形和吊杆布置来满足工程师设计目标，找形思路如下图。</p><img src="https://zlguo2023.oss-cn-hangzhou.aliyuncs.com/img/基本流程图 (5).jpg" alt="基本流程图 (5)" style="zoom:67%;" /><center> 空间主缆找形思路 </center><p>本文做了一个简单的案例，利用midascivil软件对该类结构进行试找形，midascivil是通过改变索的无应力长度来实现迭代过程，本例迭代七次主缆节点位移就收敛了。</p><p><img src="https://zlguo2023.oss-cn-hangzhou.aliyuncs.com/img/%E8%BF%AD%E4%BB%A3%E7%BB%93%E6%9E%9C.png" alt="迭代结果"></p><center> 主缆迭代收敛结果 </center><p><img src="https://zlguo2023.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%90%E6%A1%A5%E6%A8%A1%E5%9E%8B.png" alt="成桥模型"></p><center> 成桥模型 </center><p>实际上这个迭代过程通过编程可以快速完成，现在可以通过midascivil的API接口调用相应的功能来完成，后续我会进行相应插件开发。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 人行桥 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 悬索桥 </tag>
+            
+            <tag> 空间主缆找形 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>自己做一个傅里叶分析工具</title>
       <link href="/gzl/cfba914c.html"/>
       <url>/gzl/cfba914c.html</url>
@@ -33,7 +60,7 @@
       <link href="/gzl/f98b0068.html"/>
       <url>/gzl/f98b0068.html</url>
       
-        <content type="html"><![CDATA[<p>大跨径的人行拱桥一般宽跨比较小，桥梁的侧向稳定性是一个值得关注的问题，本文分析了一座大跨径钢筋砼拱桥在船撞作用下的动力特性，并对其侧向稳定性做了分析。<span id="more"></span></p><h2 id="项目概况"><a href="#项目概况" class="headerlink" title="项目概况"></a>项目概况</h2><p>桥梁上跨现状航道，主桥为1×126m 中承式钢筋混凝土变截面箱形拱桥，桥面全宽 5.17m。主拱为双肋拱，矢高 31.50m，矢跨比为 1&#x2F;4，拱轴线采用悬链线，主拱间距6m，宽跨比为1&#x2F;21。</p><img src="https://zlguo2023.oss-cn-hangzhou.aliyuncs.com/img/13-1.png"  /><center> 桥梁立面 </center><h2 id="船撞力作用下的动力特性分析"><a href="#船撞力作用下的动力特性分析" class="headerlink" title="船撞力作用下的动力特性分析"></a>船撞力作用下的动力特性分析</h2><p>本文船舶撞击力采用规范提供的公式进行计算。根据水域实际情况及通航要求确定船舶速度后，由《公路桥梁抗撞设计规范》的公式计算船舶撞击力曲线，施加在相应节点位置，进行时程分析。</p><p>以1000DWT轮船撞击力计算结果为例，其他吨位的船型在这里不多做介绍。</p><p>横桥向1000DWT船舶撞击力作用下，拱顶节点的侧向位移及频谱分析如下图。图中可以看出，横向撞击力作用响应幅值对应的是桥梁一阶自振模态频率（0.443Hz）。</p><p><img src="https://zlguo2023.oss-cn-hangzhou.aliyuncs.com/img/13-2.png"></p><center> 一阶自振模态 </center><p><img src="https://zlguo2023.oss-cn-hangzhou.aliyuncs.com/img/13-3.png"></p><p>纵桥向1000DWT船舶撞击力作用下，拱顶节点的侧向、竖向位移及相应频谱分析如下图。图中可以看出，响应幅值分别对应的是桥梁一阶自振模态频率（0.443Hz）及第十九阶自振模态频率（1.316Hz）。</p><p><img src="https://zlguo2023.oss-cn-hangzhou.aliyuncs.com/img/13-4.png"></p><center> 十九阶自振模态 </center><p><img src="https://zlguo2023.oss-cn-hangzhou.aliyuncs.com/img/13-5.png" alt="13-5"></p><center> 拱顶节点侧向位移 </center><p><img src="https://zlguo2023.oss-cn-hangzhou.aliyuncs.com/img/13-6.png"></p><center> 拱顶节点竖向位移 </center><h2 id="稳定性分析"><a href="#稳定性分析" class="headerlink" title="稳定性分析"></a>稳定性分析</h2><p>首先进行结构线弹性稳定分析，荷载工况考虑恒载+人群（满载）及恒载+1&#x2F;2人群（半桥）的工况。计算结果可知，桥梁的一阶屈曲模态为拱肋面外屈曲，与一阶自振模态形状一致。由于横向船撞力作用下对结构一阶自振模态有较大的激励作用，初步判断横向船撞力作用对该桥稳定性会有一定的影响。</p><p><img src="https://zlguo2023.oss-cn-hangzhou.aliyuncs.com/img/13-7.png" alt="13-7"></p><center> 一阶线弹性屈曲模态 </center><p>工况1：恒载+人群（满载），稳定系数4.54。</p><p>工况2：恒载+人群（1&#x2F;2偏载），稳定系数4.721。</p><p>一般拱桥横向稳定系数要求不小于4.0，结构线弹性稳定性分析所得稳定性系数是非线性稳定的上限，拱肋在船撞力作用下会产生较大的横向位移，实际上可以看成是一种几何非线性的情况，如果再考虑材料非线性，稳定系数会更小。</p><p>为评估船撞力作用下拱肋侧向位移对桥梁稳定性的影响，分别计算了拱肋在1&#x2F;1000、1&#x2F;1500、1&#x2F;2000、1&#x2F;2500、1&#x2F;3000主拱跨径初始缺陷的情况下稳定系数，如下表所示：</p><center> 考虑几何非线性的稳定系数 </center><table>      <tr>          <td>项目</td>          <td colspan="5">初始缺陷及稳定系数</td>      <tr>        <tr>            <td>初始缺陷</td>            <td>1/1000</td>          <td>1/1500</td>            <td>1/2000</td>          <td>1/2500</td>          <td>1/3000</td>      </tr>        <tr>            <td>缺陷幅值</td>            <td>0.126</td>          <td>0.084</td>          <td>0.063</td>          <td>0.504</td>          <td>0.042</td>      </tr>      <tr>            <td>稳定系数</td>            <td>4.258</td>          <td>4.321</td>          <td>4.332</td>          <td>4.355</td>          <td>4.361</td>      </tr></table><p>可见该桥稳定系数对初始几何缺陷并不敏感。结构在1000DWT的船撞作用下拱顶最大侧向位移约为4cm，对结构稳定性影响不大。</p><h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>实际上该桥在1000DWT级别船只以一定速度的船撞作用下，桥梁碰撞位置构件因为承载能力不足而发生结构性破坏，因此该桥在船撞作用下的破坏模式为结构性破坏，而不是失稳破坏，后续评估只需验算构件承载力即可。</p>]]></content>
+        <content type="html"><![CDATA[<p>大跨径的人行拱桥一般宽跨比较小，桥梁的侧向稳定性是一个值得关注的问题，本文分析了一座大跨径钢筋砼拱桥在船撞作用下的动力特性，并对其侧向稳定性做了分析。<span id="more"></span></p><h2 id="项目概况"><a href="#项目概况" class="headerlink" title="项目概况"></a>项目概况</h2><p>桥梁上跨现状航道，主桥为1×126m 中承式钢筋混凝土变截面箱形拱桥，桥面全宽 5.17m。主拱为双肋拱，矢高 31.50m，矢跨比为 1&#x2F;4，拱轴线采用悬链线，主拱间距6m，宽跨比为1&#x2F;21。</p><img src="https://zlguo2023.oss-cn-hangzhou.aliyuncs.com/img/13-1.png"  /><center> 桥梁立面 </center><h2 id="船撞力作用下的动力特性分析"><a href="#船撞力作用下的动力特性分析" class="headerlink" title="船撞力作用下的动力特性分析"></a>船撞力作用下的动力特性分析</h2><p>本文船舶撞击力采用规范提供的公式进行计算。根据水域实际情况及通航要求确定船舶速度后，由《公路桥梁抗撞设计规范》的公式计算船舶撞击力曲线，施加在相应节点位置，进行时程分析。</p><p>以1000DWT轮船撞击力计算结果为例，其他吨位的船型在这里不多做介绍。</p><p>横桥向1000DWT船舶撞击力作用下，拱顶节点的侧向位移及频谱分析如下图。图中可以看出，横向撞击力作用响应幅值对应的是桥梁一阶自振模态频率（0.443Hz）。</p><p><img src="https://zlguo2023.oss-cn-hangzhou.aliyuncs.com/img/13-2.png"></p><center> 空间主缆找形思路 </center><p><img src="https://zlguo2023.oss-cn-hangzhou.aliyuncs.com/img/13-3.png"></p><p>纵桥向1000DWT船舶撞击力作用下，拱顶节点的侧向、竖向位移及相应频谱分析如下图。图中可以看出，响应幅值分别对应的是桥梁一阶自振模态频率（0.443Hz）及第十九阶自振模态频率（1.316Hz）。</p><p><img src="https://zlguo2023.oss-cn-hangzhou.aliyuncs.com/img/13-4.png"></p><center> 十九阶自振模态 </center><p><img src="https://zlguo2023.oss-cn-hangzhou.aliyuncs.com/img/13-5.png" alt="13-5"></p><center> 成桥模型 </center><p><img src="https://zlguo2023.oss-cn-hangzhou.aliyuncs.com/img/13-6.png"></p><center> 拱顶节点竖向位移 </center><h2 id="稳定性分析"><a href="#稳定性分析" class="headerlink" title="稳定性分析"></a>稳定性分析</h2><p>首先进行结构线弹性稳定分析，荷载工况考虑恒载+人群（满载）及恒载+1&#x2F;2人群（半桥）的工况。计算结果可知，桥梁的一阶屈曲模态为拱肋面外屈曲，与一阶自振模态形状一致。由于横向船撞力作用下对结构一阶自振模态有较大的激励作用，初步判断横向船撞力作用对该桥稳定性会有一定的影响。</p><p><img src="https://zlguo2023.oss-cn-hangzhou.aliyuncs.com/img/13-7.png" alt="13-7"></p><center> 一阶线弹性屈曲模态 </center><p>工况1：恒载+人群（满载），稳定系数4.54。</p><p>工况2：恒载+人群（1&#x2F;2偏载），稳定系数4.721。</p><p>一般拱桥横向稳定系数要求不小于4.0，结构线弹性稳定性分析所得稳定性系数是非线性稳定的上限，拱肋在船撞力作用下会产生较大的横向位移，实际上可以看成是一种几何非线性的情况，如果再考虑材料非线性，稳定系数会更小。</p><p>为评估船撞力作用下拱肋侧向位移对桥梁稳定性的影响，分别计算了拱肋在1&#x2F;1000、1&#x2F;1500、1&#x2F;2000、1&#x2F;2500、1&#x2F;3000主拱跨径初始缺陷的情况下稳定系数，如下表所示：</p><center> 考虑几何非线性的稳定系数 </center><table>      <tr>          <td>项目</td>          <td colspan="5">初始缺陷及稳定系数</td>      <tr>        <tr>            <td>初始缺陷</td>            <td>1/1000</td>          <td>1/1500</td>            <td>1/2000</td>          <td>1/2500</td>          <td>1/3000</td>      </tr>        <tr>            <td>缺陷幅值</td>            <td>0.126</td>          <td>0.084</td>          <td>0.063</td>          <td>0.504</td>          <td>0.042</td>      </tr>      <tr>            <td>稳定系数</td>            <td>4.258</td>          <td>4.321</td>          <td>4.332</td>          <td>4.355</td>          <td>4.361</td>      </tr></table><p>可见该桥稳定系数对初始几何缺陷并不敏感。结构在1000DWT的船撞作用下拱顶最大侧向位移约为4cm，对结构稳定性影响不大。</p><h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>实际上该桥在1000DWT级别船只以一定速度的船撞作用下，桥梁碰撞位置构件因为承载能力不足而发生结构性破坏，因此该桥在船撞作用下的破坏模式为结构性破坏，而不是失稳破坏，后续评估只需验算构件承载力即可。</p>]]></content>
       
       
       <categories>
