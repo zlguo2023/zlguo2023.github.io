@@ -6,7 +6,7 @@
   <link href="https://zl-guo.com/atom.xml" rel="self"/>
   
   <link href="https://zl-guo.com/"/>
-  <updated>2025-09-12T13:27:24.005Z</updated>
+  <updated>2025-10-04T05:00:20.442Z</updated>
   <id>https://zl-guo.com/</id>
   
   <author>
@@ -17,11 +17,32 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>项目归档管理系统V1.0</title>
+    <link href="https://zl-guo.com/gzl/2a49b96c.html"/>
+    <id>https://zl-guo.com/gzl/2a49b96c.html</id>
+    <published>2025-10-04T04:28:51.975Z</published>
+    <updated>2025-10-04T05:00:20.442Z</updated>
+    
+    <content type="html"><![CDATA[<p>工作做久了之后会有大量的成果资料积累下来，很多时隔3年以上的项目都会慢慢淡忘，有时候想找以前的项目资料来作为新项目的参考需要花很大力气，因此我编写了一个很简洁实用的项目归档管理小程序。<span id="more"></span></p><p>实际上电脑里面也有搜索功能，但是他会遍沥每一个文件，给出一堆相关结果，很不方便。于是我针对多年的结构设计经验遇到的项目归档问题编写了一个项目归档小程序，按相应的方式进行归档，对于以文件夹为单位归档的资料只会检索到文件夹，而对于单个文件则会检索到该文件，且可以打开文件所在位置。对于一些单个文件，比如下载的论文等归档的时候可以把关键词放到文件名里面，这样就很容易找到想要的结果。</p><img src="https://zlguo2023.oss-cn-hangzhou.aliyuncs.com/img/archive_manager1.png" alt="archive_manager1" style="zoom:50%;" /><img src="https://zlguo2023.oss-cn-hangzhou.aliyuncs.com/img/archive_manager2.png" alt="archive_manager2" style="zoom:50%;" /><img src="https://zlguo2023.oss-cn-hangzhou.aliyuncs.com/img/archive_manager3.png" alt="archive_manager3" style="zoom:50%;" /><center>软件界面</center><p>实际上，我觉得这个思路在其他专业的归档工作也是适用的，如果有需要的小伙伴也可以根据你的归档习惯进行有尝定制，在下方评论区留言即可，我会主动联系。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;工作做久了之后会有大量的成果资料积累下来，很多时隔3年以上的项目都会慢慢淡忘，有时候想找以前的项目资料来作为新项目的参考需要花很大力气，因此我编写了一个很简洁实用的项目归档管理小程序。</summary>
+    
+    
+    
+    <category term="python" scheme="https://zl-guo.com/categories/python/"/>
+    
+    
+    <category term="日常办公" scheme="https://zl-guo.com/tags/%E6%97%A5%E5%B8%B8%E5%8A%9E%E5%85%AC/"/>
+    
+  </entry>
+  
+  <entry>
     <title>单索面曲梁人行悬索桥主缆找形分析</title>
     <link href="https://zl-guo.com/gzl/37cbfda0.html"/>
     <id>https://zl-guo.com/gzl/37cbfda0.html</id>
     <published>2025-09-12T13:20:16.070Z</published>
-    <updated>2025-09-12T13:27:24.005Z</updated>
+    <updated>2025-09-12T13:27:43.399Z</updated>
     
     <content type="html"><![CDATA[<p>单索面曲梁人行悬索桥是很有张力的一个设计，有一种独特的结构美，其难点在于主缆找形。单索面曲梁人行悬索桥主缆一般无法满足节线法的假定，可以采用自编程序或者非线性有限元迭代法等方法找形。<span id="more"></span></p><img src="https://zlguo2023.oss-cn-hangzhou.aliyuncs.com/img/36a7839c6126ae161f1ba1ed526ac113.jpeg" alt="36a7839c6126ae161f1ba1ed526ac113" style="zoom: 50%;" /><center> 单索面曲梁人行悬索桥资料图 </center><p>这类空间主缆受吊杆布置及吊杆力的影响，很难去指定一个索形态，因此设计时一般需先预设一个目标，以此来作为找形目标，并根据成桥计算结果去调整目标索形和吊杆布置来满足工程师设计目标，找形思路如下图。</p><img src="https://zlguo2023.oss-cn-hangzhou.aliyuncs.com/img/基本流程图 (5).jpg" alt="基本流程图 (5)" style="zoom:67%;" /><center> 空间主缆找形思路 </center><p>本文做了一个简单的案例，利用midascivil软件对该类结构进行试找形，midascivil是通过改变索的无应力长度来实现迭代过程，本例迭代七次主缆节点位移就收敛了。</p><p><img src="https://zlguo2023.oss-cn-hangzhou.aliyuncs.com/img/%E8%BF%AD%E4%BB%A3%E7%BB%93%E6%9E%9C.png" alt="迭代结果"></p><center> 主缆迭代收敛结果 </center><p><img src="https://zlguo2023.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%90%E6%A1%A5%E6%A8%A1%E5%9E%8B.png" alt="成桥模型"></p><center> 成桥模型 </center><p>实际上这个迭代过程通过编程可以快速完成，现在可以通过midascivil的API接口调用相应的功能来完成，后续我会进行相应插件开发。</p>]]></content>
     
